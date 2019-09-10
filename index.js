@@ -1,4 +1,4 @@
-function RegexSearch(str) {
+function regexSearch(str) {
   const regex = /(^Web\S+\sname:\s([\S\u0020]*)\n*^Web\S+\sURL:\s([\S\u0020]*)\n*^Login\sname:\s([\S\u0020]*)\n*^Login:\s([\S\u0020]*)\n*^Password:\s([\S\u0020]*)\n*^Comment:\s([\S\u0020]*)$)/gm;
 
   let m;
@@ -21,10 +21,14 @@ function RegexSearch(str) {
 console.log(document.querySelector(".submit"));
 document.querySelector(".submit").addEventListener("click", () => {
   var val = document.querySelector(".KPMFile").value;
-  RegexSearch(val);
+  regexSearch(val);
 });
 
 document.querySelector(".copyOutput").addEventListener("click", () => {
   document.querySelector(".output").select();
   document.execCommand("copy");
+  document.querySelector(".copyOutput").innerHTML = "Copied!";
+  setTimeout(() => {
+    document.querySelector(".copyOutput").innerHTML = "Copy!";
+  }, 2000);
 });
