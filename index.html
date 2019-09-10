@@ -4,48 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-
-    <style>
-      body {
-        background: lightgrey;
-        display: flex;
-        padding: 20px;
-        width: 100vw;
-        box-sizing: border-box;
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        color: black;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        margin: 0 auto;
-        flex-direction: column;
-      }
-
-      .KPMFile,
-      .output {
-        display: block;
-        width: calc(100vw - 100px);
-        max-width: calc(100vw - 100px);
-        min-width: calc(100vw - 100px);
-        min-height: 300px;
-      }
-
-      @media screen and (min-width: 1140px) {
-        body {
-          width: 1100px;
-        }
-
-        .KPMFile,
-        .output {
-          display: block;
-          width: 1100px;
-          max-width: 1100px;
-          min-width: 1100px;
-          min-height: 500px;
-        }
-      }
-    </style>
+    <title>KPM Export as CSV</title>
   </head>
   <body>
     <div>
@@ -60,7 +19,7 @@
       Output:<button class="copyOutput">Copy</button>
       <textarea readonly class="output"></textarea>
     </div>
-
+    <link href="main.css" rel="stylesheet" media="screen" />
     <script src="index.js" type="text/javascript"></script>
   </body>
 </html>
