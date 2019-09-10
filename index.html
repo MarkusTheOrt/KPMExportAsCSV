@@ -10,8 +10,9 @@
       body {
         background: lightgrey;
         display: flex;
-        width: 1100px;
         padding: 20px;
+        width: 100vw;
+        box-sizing: border-box;
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         color: black;
         justify-content: center;
@@ -24,10 +25,25 @@
       .KPMFile,
       .output {
         display: block;
-        width: 1100px;
-        max-width: 1100px;
-        min-width: 1100px;
-        min-height: 500px;
+        width: calc(100vw - 100px);
+        max-width: calc(100vw - 100px);
+        min-width: calc(100vw - 100px);
+        min-height: 300px;
+      }
+
+      @media screen and (min-width: 1140px) {
+        body {
+          width: 1100px;
+        }
+
+        .KPMFile,
+        .output {
+          display: block;
+          width: 1100px;
+          max-width: 1100px;
+          min-width: 1100px;
+          min-height: 500px;
+        }
       }
     </style>
   </head>
